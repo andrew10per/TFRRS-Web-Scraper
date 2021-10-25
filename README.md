@@ -1,0 +1,4 @@
+# TFRRS-Web-Scraper
+A Python application that uses BeautifulSoup to scrape data off of TFRRS via a team's homepage. Collects all Athlete's and their best times into a data structure "Team", which can then be used to export this data to a .json file for purposes of saving and comparing teams.
+
+Currently, the two functions in the main file can be used to gather information on teams, or individuals, which can then be placed into teams if wanted. The team can also be exported to a .json file to be saved. In the future, I'd like to add some sort of metric on which to judge teams by, and assign a score, however with the variances in teams performances, and the meaning of XC times being somewhat subjective, this can be hard to judge. Either way, for now this can provide functionality to pull information off of TFRRS website which lacks any real api to pull data off their databases. 
