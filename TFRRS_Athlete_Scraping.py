@@ -102,11 +102,8 @@ def getTeam(url):
     team.printTeam()
     return team
     
-        
-    
-teamURL = input("Paste in a Team's URL: ")
-thisteam = getTeam(teamURL)
 
 #"https://www.tfrrs.org/teams/NY_college_m_Niagara.html"
+#sample team URL ^^^
 
 

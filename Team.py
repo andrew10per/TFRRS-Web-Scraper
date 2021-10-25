@@ -53,10 +53,6 @@ class Team:
 
 
 
-team = Team("Hello",[])
-team.inputFromJSON("Niagara.json")
-team.printTeam()
-
 
 
 
