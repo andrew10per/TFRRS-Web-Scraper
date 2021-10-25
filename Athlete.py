@@ -19,4 +19,6 @@ class Athlete:
         print(self.name)
         #prints out event, and time to go with it.
         print(self.prs)
+
+    
         

@@ -28,8 +28,34 @@ class Team:
         exportdict[self.name] = helperdict
         jsonEXP = json.dumps(exportdict, indent = 1)
         
-        with open(filename, "w") as outfile:
-            outfile.write(jsonEXP)
+        try:
+            with open(filename, "w") as outfile:
+                outfile.write(jsonEXP)
+        except:
+            print("Invalid file name.")
+
+    #Accepts a JSON as input and then imports the .json file.
+    def inputFromJSON(self, filename):
+        importdict = {}
+        try:
+            f = open(filename, 'r')
+        except:
+            print("Invalid file name.")
+        importdict = json.load(f)
+        for key in importdict:
+            self.name = key
+            for key2 in importdict[key]:
+                newAthlete = Athlete.Athlete(key2,[],[])
+                for key3 in importdict[key][key2]:
+                    newAthlete.prs[key3] = importdict[key][key2][key3]
+                self.members.append(newAthlete)
+
+
+
+
+team = Team("Hello",[])
+team.inputFromJSON("Niagara.json")
+team.printTeam()
 
 
 
